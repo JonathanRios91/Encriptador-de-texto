@@ -1,0 +1,16 @@
+:root {
+    --color-fondo:#FCDC94;
+    --color-textos:#78ABA8;
+    /*--color-heder:#EF9C66*/
+    --color-footer: #C8CFA0;
+
+    --fuente-montserrat:"Montserrat", sans-serif;
+    --fuente-krona-one: "Krona One", sans-serif;
+}
+
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-textos);
+    box-sizing: border-box;
+}
