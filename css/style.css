@@ -1,13 +1,113 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
 :root {
     --color-fondo: #9CDBA6;
     --color-textos:#78ABA8;
+    --color-botones: #50B498;
+    --color-txt-btn: #DEF9C4;
     --color-heder: #EF9C66;
     --color-footer:#C8CFA0;
 
-    --fuente-montserrat:"Montserrat", sans-serif;
-    --fuente-krona-one: "Krona One", sans-serif;
-}*
+    --fuente-Permanent-Marker:"Permanent Marker", cursive;
+    --fuente-edu-vic-wa-nt-beginner: "Edu VIC WA NT Beginner", cursive;
+}
 
-body{
+body {
     background-color: var(--color-fondo);
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    padding-top: 3%;
+    margin-left: 3%;
+    width: 10%;
+}
+
+
+.encriptador {
+    width: 100%;
+    padding-left: 2%;
+    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #78ABA8;
+    border-radius: 10px;
+}
+
+.texto-aviso {
+    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    font-size: 20px;
+}
+
+.texto-sin-resultado {
+    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    font-size: 20px;  
+}
+
+.Texto-resultado {
+    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    font-size: 20px;  
+}
+
+.texto-foter {
+    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    font-size: 15px;   
+}
+
+.aviso-encriptador{
+    display: flex;
+    gap: 1%;
+}
+
+.imagen-aviso{
+    object-fit: contain;
+}
+
+.botones {
+    display: flex;
+    margin-top: 20px;
+    gap: 5%;
+}
+
+.btn-encriptar { 
+    background-color: var(--color-botones);
+    border-radius: 5rem;
+    color: var(--color-txt-btn);
+    width: 15rem;
+    padding: 0.5rem;
+    font-size:1.5rem;
+}
+
+.btn-desencriptar {
+    background-color: var(--color-botones);
+    border-radius: 5rem;
+    color: var(--color-txt-btn);
+    width: 15rem;
+    padding: 0.5rem;
+    font-size:1.5rem;
+}
+
+.texto-foter{
+    background-color:#50B498;
+    text-align: center;
+    font-size: 100%;
+    padding: 1%;
+    margin-top: 5%;
+}
+
+.cuadro-resultado{
+    background-color:var(--color-heder);
+    height: 200%;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #78ABA8;
+    border-radius: 10px;
 }
