@@ -9,23 +9,24 @@
 </head>
 
 <body>
-    <Footer>
+
+    <!--Encabezado-->
+    <header>
             <img src="img/Logo-alura.png" alt="logo-alura" class="logo">
-    </Footer>
+    </header>
+
+    <!--Cuerpo-->
     <main>
         <section class="cuadro-encriptador">
-            <textarea class="encriptador" cols="20" rows="10" placeholder="Ingrese el texto aqui."></textarea>
-
+            <textarea class="encriptador" cols="20" rows="14" placeholder="Ingrese el texto aqui."></textarea>
             <div class="aviso-encriptador">
                 <img src="img/bi_exclamation-circle-fill.png" alt="aviso" class="imagen-aviso">
                 <p class="texto-aviso">Solo letras minusculas y sin acentos.</p>
             </div>
-    
             <div class="botones">
-                <button type="submit" class="btn-encriptar">Encriptar</button>
+                <button type="submit" class="btn-encriptar" onclick="BotonEncriptar">Encriptar</button>
                 <button type="submit" class="btn-desencriptar">Desencriptar</button>
             </div>
-
         </section>
 
         <section class="cuadro-resultado">
@@ -34,17 +35,23 @@
                 <p class="texto-sin-resultado">Ningun mensaje fue encontrado.</p>
                 <p class="Texto-resultado">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-
             <textarea type="mensaje" class="evalua" readonly></textarea>
-
             <button type="submit" class="Btn-copiar">Copiar</button>
-
         </section>
     </main>
 
+    <!--Inferior-->
     <footer>
         <p class="texto-foter">» Desarrollado por Jonathan Rios « ®</p>
+        <a href="#" rel="">
+            <img src="./img/github.png" alt="logo github"class="github">
+        </a>
+        <a href="#" rel="">
+            <img src="./img/linkedin.png" alt="linkedin"class="linkedin">
+        </a>
     </footer>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>

@@ -1,113 +1,281 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');*/
+/*----------------
+fuenets
+----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
 
+/*----------------
+Global Css
+----------------*/
+
 :root {
-    --color-fondo: #9CDBA6;
-    --color-textos:#78ABA8;
-    --color-botones: #50B498;
-    --color-txt-btn: #DEF9C4;
-    --color-heder: #EF9C66;
-    --color-footer:#C8CFA0;
+    --color-blanco: #ffffff;
+    --color-black: #000000;
+    --color-paletaA-1: #DEF9C4;
+    --color-paletaA-2: #9CDBA6;
+    --color-paletaA-3: #50B498;
+    --color-paletaA-4: #468585;
+    --color-paletaB-1: #D6EFD8;
+    --color-paletaB-2: #80AF81;
+    --color-paletaB-3: #508D4E;
+    --color-paletaB-4: #1A5319;
 
     --fuente-Permanent-Marker:"Permanent Marker", cursive;
     --fuente-edu-vic-wa-nt-beginner: "Edu VIC WA NT Beginner", cursive;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    text-decoration: none;
+    background: var(--color-blanco);
+}
+
 body {
-    background-color: var(--color-fondo);
+    height: 100%;
 }
 
-main {
+img {
+    max-width: 100%;
+}
+
+/*----------------
+Encabezado
+----------------*/
+
+header {
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo{
     display: flex;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
 }
 
-.logo {
-    padding-top: 3%;
-    margin-left: 3%;
-    width: 10%;
+/*----------------
+Cuerpo
+----------------*/
+
+main { 
+    display: flex;
+    flex-direction: row;
+    background: url(../img/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+.cuadro-encriptador {
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;    
+}
 
 .encriptador {
-    width: 100%;
-    padding-left: 2%;
-    font-family: var(--fuente-edu-vic-wa-nt-beginner);
+    width: 660px;
+    height: 288px;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    border-style: ridge;
-    border-width: 5px;
-    border-color: #78ABA8;
-    border-radius: 10px;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--color-paletaA-2);
+    border-radius: 15px;
+    resize: none;
 }
 
-.texto-aviso {
-    font-family: var(--fuente-edu-vic-wa-nt-beginner);
-    font-size: 20px;
+.encriptador::placeholder,:focus {
+    color: var(--color-paletaA-3);
 }
 
-.texto-sin-resultado {
-    font-family: var(--fuente-edu-vic-wa-nt-beginner);
-    font-size: 20px;  
-}
-
-.Texto-resultado {
-    font-family: var(--fuente-edu-vic-wa-nt-beginner);
-    font-size: 20px;  
-}
-
-.texto-foter {
-    font-family: var(--fuente-edu-vic-wa-nt-beginner);
-    font-size: 15px;   
-}
-
-.aviso-encriptador{
+.aviso-encriptador {
     display: flex;
-    gap: 1%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
 }
 
-.imagen-aviso{
-    object-fit: contain;
+.texto-aviso { 
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--color-paletaA-4);
 }
 
 .botones {
     display: flex;
-    margin-top: 20px;
-    gap: 5%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
 }
 
-.btn-encriptar { 
-    background-color: var(--color-botones);
-    border-radius: 5rem;
-    color: var(--color-txt-btn);
-    width: 15rem;
-    padding: 0.5rem;
-    font-size:1.5rem;
+.btn-encriptar {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-paletaB-4);
+    border: 1px solid var(--color-paletaA-3);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--color-paletaB-3);
+}
+
+.btn-encriptar:active { 
+    box-shadow: inset 2px 2px 4px var(--color-black), inset -3px -4px 8px var(--color-paletaA-3);
+    color: var(--color-paletaB-1);
 }
 
 .btn-desencriptar {
-    background-color: var(--color-botones);
-    border-radius: 5rem;
-    color: var(--color-txt-btn);
-    width: 15rem;
-    padding: 0.5rem;
-    font-size:1.5rem;
-}
-
-.texto-foter{
-    background-color:#50B498;
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
     text-align: center;
-    font-size: 100%;
-    padding: 1%;
-    margin-top: 5%;
+    color: var(--color-paletaB-4);
+    background-color: var(--color-paletaB-1);
+    border: 1px solid var(--color-paletaA-3);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--color-paletaB-3);
 }
 
-.cuadro-resultado{
-    background-color:var(--color-heder);
-    height: 200%;
-    border-style: ridge;
-    border-width: 5px;
-    border-color: #78ABA8;
-    border-radius: 10px;
+.Btn-copiar:active,
+.btn-desencriptar:active { 
+    box-shadow: inset 2px 2px 4px var(--color-black), inset -3px -4px 8px var(--color-paletaA-3);
+    color: var(--color-paletaB-4);
+}
+
+.cuadro-resultado { 
+    width: 270px;
+    height: 550px;
+    background: var(--color-paletaB-1);
+    box-shadow: 10px 24px 32px -8px var(--color-paletaA-4);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align:center;
+}
+
+.area-de-encriptado {
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--color-paletaB-1);
+}
+
+.img-muneco{
+    background: var(--color-paletaB-1);
+}
+
+.texto-sin-resultado{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-paletaB-4);
+    background: var(--color-paletaB-1);  
+}
+
+.Texto-resultado {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-paletaB-4);
+    background: var(--color-paletaB-1)
+}
+
+.evalua {
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-paletaB-4);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evalua:focus {
+    outline: none;
+}
+
+.Btn-copiar {
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*visibility:hidden;*/
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-blanco);
+    background: var(--color-paletaA-4);
+    border: 1px solid var(--color-paletaB-4);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.Btn-copiar:hover {
+    transform: scale(0.97);
+}
+
+/*----------------
+Inferior
+----------------*/
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    border-top: 2px solid var(--color-paletaA-3);
+    color: var(--color-paletaB-3);
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-paletaB-3);
+}
+ 
+.linkedin:hover {
+    color: var(--color-paletaB-4);
+    opacity: 0.8;
+}
+
+.github:hover {
+    color: var(--color-paletaB-3);
+    opacity: 0.8;
 }
