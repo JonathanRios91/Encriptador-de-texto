@@ -30,7 +30,6 @@ Global Css
     box-sizing: border-box;
     font-family: var(--fuente-edu-vic-wa-nt-beginner);
     text-decoration: none;
-    background: var(--color-blanco);
 }
 
 body {
@@ -64,18 +63,20 @@ Cuerpo
 main { 
     display: flex;
     flex-direction: row;
-    background: url(../img/portada.png) no-repeat;
+    background: url(../img/fondo-3167089.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    /*background-attachment: fixed;*/
 }
 
 .cuadro-encriptador {
     width: 60%;
-    margin: 168px 0px 0px 140px;
-    background: transparent;    
+    margin: 120px 0px 0px 140px;
+    background: transparent;
 }
 
 .encriptador {
+    background: var(--color-paletaB-1);
     width: 660px;
     height: 288px;
     font-weight: 400;
@@ -107,8 +108,8 @@ main {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    opacity: 0.8;
-    color: var(--color-paletaA-4);
+    /*opacity: 0.8;*/
+    color: var(--color-blanco);
 }
 
 .botones {
@@ -167,9 +168,9 @@ main {
 
 .cuadro-resultado { 
     width: 270px;
-    height: 550px;
+    height: 580px;
     background: var(--color-paletaB-1);
-    box-shadow: 10px 24px 32px -8px var(--color-paletaA-4);
+    box-shadow: 10px 24px 32px -8px var(--color-paletaA-1);
     position: relative;
     margin-top: 40px;
     border-radius: 32px;
@@ -236,7 +237,7 @@ main {
     position: absolute;
     bottom: 0;
     left: 0;
-    /*visibility:hidden;*/
+    visibility:hidden;
     padding: 24px;
     font-size: 16px;
     line-height: 19px;
@@ -259,7 +260,7 @@ Inferior
 ----------------*/
 
 footer {
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 10px;
     border-top: 2px solid var(--color-paletaA-3);
     color: var(--color-paletaB-3);
@@ -278,4 +279,110 @@ footer {
 .github:hover {
     color: var(--color-paletaB-3);
     opacity: 0.8;
+}
+
+/*----------------
+Media
+----------------*/
+
+@media(max-width: 1250px){
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cuadro-encriptador{
+        margin: 100px 0px 60px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+    }
+
+    .encriptador{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .aviso-encriptador{
+        position: inherit;
+        margin: 15px;
+    }
+    
+    .cuadro-resultado{
+        margin: 50px 0px 0px 0px;
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .area-de-encriptado{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .img-muneco{
+        display: none;
+    }
+
+    .botones{
+        justify-content: center;
+        align-items: center;
+        top: 450px;
+        width: 100%;
+    }
+
+    .Btn-copiar{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evalua{
+        width: 100%;
+        height: 210px;
+        padding: 10%;
+    }
+
+}
+
+
+@media(max-width: 720px){
+    
+    header .logo{
+        width: 100%;
+        background: transparent;
+        padding: 2px;
+    }
+
+    .encriptador{
+        width: 90%;
+        font-size: 24px;    
+    }
+
+    .botones{
+        display: grid;
+        width: 100%;
+    }
+
+    .cuadro-resultado{
+        margin: 110px 0px 0px 0px;
+        width: 90%;
+    }
+
+    .texto-foter{
+        font-size: 15px;
+    }
+
 }
