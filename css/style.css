@@ -66,7 +66,8 @@ main {
     background: url(../img/fondo-3167089.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
-    /*background-attachment: fixed;*/
+    /* sirve para dar propiedad al fondo de que se vueva con la barra lateral */
+    /* background-attachment: fixed; */
 }
 
 .cuadro-encriptador {
