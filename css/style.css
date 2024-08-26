@@ -33,11 +33,10 @@ Global Css
 }
 
 body {
-    height: 100%;
-}
-
-img {
-    max-width: 100%;
+    background: url(../img/fondo-3167089.jpg) no-repeat;
+    background-size: cover;
+    /* sirve para dar propiedad al fondo de que se vueva con la barra lateral */
+    background-attachment: fixed;
 }
 
 /*----------------
@@ -63,11 +62,8 @@ Cuerpo
 main { 
     display: flex;
     flex-direction: row;
-    background: url(../img/fondo-3167089.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
-    /* sirve para dar propiedad al fondo de que se vueva con la barra lateral */
-    background-attachment: fixed;
 }
 
 .cuadro-encriptador {
@@ -124,7 +120,7 @@ main {
 }
 
 .btn-encriptar {
-    width: 328px;
+    width: 250px;
     height: 67px;
     padding: 24px;
     font-style: normal;
@@ -137,16 +133,17 @@ main {
     border: 1px solid var(--color-paletaA-3);
     border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0px 20px 29px -5px var(--color-paletaB-3);
+    box-shadow: 0px 20px 29px -5px var(--color-black);
 }
 
+.btn-reiniciar:active,
 .btn-encriptar:active { 
     box-shadow: inset 2px 2px 4px var(--color-black), inset -3px -4px 8px var(--color-paletaA-3);
     color: var(--color-paletaB-1);
 }
 
 .btn-desencriptar {
-    width: 328px;
+    width: 250px;
     height: 67px;
     padding: 24px;
     font-style: normal;
@@ -159,7 +156,24 @@ main {
     border: 1px solid var(--color-paletaA-3);
     border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0px 20px 29px -5px var(--color-paletaB-3);
+    box-shadow: 0px 20px 29px -5px var(--color-black);
+}
+
+.btn-reiniciar {
+    width: 145px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-paletaA-3);
+    border: 1px solid var(--color-paletaA-1);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--color-black);
 }
 
 .Btn-copiar:active,
@@ -188,6 +202,7 @@ main {
 
 .img-muneco{
     background: var(--color-paletaB-1);
+    max-width: 100%;
 }
 
 .texto-sin-resultado{
@@ -251,6 +266,7 @@ main {
     cursor: pointer;
 }
 
+.btn-reiniciar:hover,
 .btn-encriptar:hover,
 .btn-desencriptar:hover,
 .Btn-copiar:hover {
@@ -262,14 +278,16 @@ Inferior
 ----------------*/
 
 footer {
-    margin-top: 40px;
-    padding: 10px;
-    border-top: 2px solid var(--color-paletaA-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 20px;
     text-align: center;
     height: 5px;
     font-size: 20px;
     font-weight: 700;
-    color: var(--color-paletaB-3);
+    color: var(--color-black);
 }
  
 .linkedin:hover {
@@ -282,9 +300,13 @@ footer {
     opacity: 0.8;
 }
 
-/*----------------
-Media
-----------------*/
+.github{
+    width: 40px;
+}
+
+
+
+/*----------------Media---------------*/
 
 @media(max-width: 1250px){
 
@@ -357,7 +379,6 @@ Media
     }
 
 }
-
 
 @media(max-width: 720px){
     

@@ -6,6 +6,7 @@ const resultado = document.querySelector(".evalua");
 const contenido = document.querySelector(".area-de-encriptado");
 const btncopiar = document.querySelector(".Btn-copiar");
 const btndesencriptar = document.querySelector(".btn-desencriptar");
+/*const btnreiniciar = document.querySelector("btn-reiniciar");*/
 
 /*---- Las "llaves" de encriptación son las siguientes: ----*/
 /*"llaves" de encriptación:
@@ -133,26 +134,6 @@ btncopiar.addEventListener("click", e=>{
 })
 
 
-/* codigo clases alura
-
-function BotonEncriptar(){
-    const textoencriptado = encriptar(textarea.value)
-    mensaje.value = textoencriptado
-    textarea.value = "";
-}
-
-function encriptar(stringEncriptada){
-    let matrizcodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-    console.table(matrizcodigo);
-    stringEncriptada=stringEncriptada.tolowercase()
-
-    for(let i = 0; i < matrizcodigo.length; i++){
-        if(stringEncriptada.includes(matrizcodigo[i][0])){
-            stringEncriptada = stringEncriptada.replaceall(matrizcodigo[i][0],matrizcodigo[i][1]);
-        }
-
-    }
-    return stringEncriptada;
-}
-
-*/
+/*---------------------- Boton Reiniciar ----------------------*/
+/*btnreiniciar..addEventListener("click", e=>{
+    e.preventDefault();*/
